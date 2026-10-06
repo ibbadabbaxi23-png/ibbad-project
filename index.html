@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibbad Arshad Abbasi - Portfolio | Aspiring IT Specialist</title>
+    <!-- Modern Fonts & FontAwesome Icons -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #131a26;
+            --text-color: #f8fafc;
+            --primary-color: #38bdf8;
+            --accent-color: #34d399;
+            --neon-glow: 0 0 20px rgba(56, 189, 248, 0.5);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: radial-gradient(circle at top, #1e293b 0%, #0b0f19 100%);
+            padding: 100px 20px;
+            text-align: center;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3.2rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        header h1 span {
+            color: var(--primary-color);
+            text-shadow: var(--neon-glow);
+        }
+
+        header p {
+            font-size: 1.3rem;
+            color: #94a3b8;
+            margin-top: 15px;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .tag {
+            display: inline-block;
+            background: rgba(52, 211, 153, 0.1);
+            color: var(--accent-color);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: 1px solid rgba(52, 211, 153, 0.3);
+            margin-top: 15px;
+            box-shadow: 0 0 10px rgba(52, 211, 153, 0.1);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 35px;
+            margin-bottom: 35px;
+            border-radius: 16px;
+            border: 1px solid #1e293b;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        section:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(56, 189, 248, 0.12);
+            border-color: #334155;
+        }
+
+        h2 {
+            font-size: 1.9rem;
+            color: var(--primary-color);
+            margin-top: 0;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            text-align: justify;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .skill-item {
+            background: #0b0f19;
+            padding: 18px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #1e293b;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            border-color: var(--primary-color);
+            background: #131a26;
+            color: var(--primary-color);
+        }
+
+        .skill-item i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .project-card {
+            background: #0b0f19;
+            padding: 25px;
+            margin-top: 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-color);
+            transition: border-color 0.3s;
+        }
+
+        .project-card:hover {
+            border-left-color: var(--primary-color);
+        }
+
+        .project-card h3 {
+            margin: 0 0 12px 0;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            background: #0b0f19;
+            color: #64748b;
+            border-top: 1px solid #1e293b;
+        }
+
+        .social-links {
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            color: #94a3b8;
+            font-size: 1.7rem;
+            margin: 0 15px;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+            text-shadow: var(--neon-glow);
+        }
+
+        .email-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .email-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Hello, I'm <span>Ibbad Arshad Abbasi</span></h1>
+        <p>&lt; Software Developer in the Making /&gt;</p>
+        <span class="tag"><i class="fa-solid fa-graduation-cap"></i> Future Fachinformatiker</span>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2><i class="fa-solid fa-code-branch"></i> About Me</h2>
+            <p class="about-text">
+                I am a highly motivated 10th-grade student from Pakistan with a **deep, unstoppable passion for programming and technology**. Writing logic and solving puzzles through code is what drives me every day. Currently, I am expanding my boundaries by learning the German language alongside my technical training. My ultimate ambition is to bridge the gap between software engineering and intelligent automation by securing a prestigious IT Ausbildung in Germany, specializing in advanced software architectures.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2><i class="fa-solid fa-laptop-code"></i> Core Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-item"><i class="fa-brands fa-python"></i> Python Development</div>
+                <div class="skill-item"><i class="fa-solid fa-square-terminal"></i> C++ Architecture</div>
+                <div class="skill-item"><i class="fa-brands fa-html5"></i> HTML5 Layouts</div>
+                <div class="skill-item"><i class="fa-solid fa-earth-europe"></i> German Language</div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2><i class="fa-solid fa-folder-open"></i> Verified Repositories</h2>
+            
+            <div class="project-card">
+                <h3><i class="fa-solid fa-server"></i> Student Management Architecture (C++)</h3>
+                <p>A robust console application built with clean Object-Oriented Programming (OOP) paradigms, featuring structural memory management and persistence via flat-file database handling.</p>
+                <a href="#" class="project-link">Explore Repository <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="project-card">
+                <h3><i class="fa-solid fa-cubes"></i> Advanced System Utility (Python)</h3>
+                <p>A modular system automation script utilizing optimized built-in libraries to clean pipelines, manage file allocations, and automate system tasks.</p>
+                <a href="#" class="project-link">Explore Repository <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:ibbadabbaxi23@gmail.com" class="email-btn"><i class="fa-solid fa-envelope"></i> Contact Me</a>
+        </div>
+        <p>&copy; 2026 Ibbad Arshad Abbasi. Built with passion for the German IT Ecosystem.</p>
+    </footer>
+
+</body>
+</html>
