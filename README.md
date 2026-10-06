@@ -1,2 +1,2 @@
 # ibbad-project
-my first codind program
+my first coding program
